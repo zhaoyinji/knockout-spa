@@ -1,3 +1,7 @@
-<h2><span data-bind="text: hero.name"></span> Details</h2>
+<h2><span data-bind="text: hero.name().toUpperCase()"></span> Details</h2>
 <div><span>id: </span><span data-bind="text: hero.id()"></span></div>
-<div><span>name: </span><span data-bind="text: hero.name()"></span></div>
+<div>
+    <label>name:
+      <input data-bind="value: hero.name, valueUpdate: 'keyup'" placeholder="name">
+    </label>
+</div>

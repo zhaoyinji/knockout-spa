@@ -2,12 +2,12 @@ import ko from 'knockout';
 import AppComponent from './app.component';
 import HerosComponent from './components/heros/heros.component';
 
-ko.components.register(HerosComponent.selector, {
-    viewModel: HerosComponent.viewModel,
-    template: HerosComponent.template
-})
+function registerComponent(targetComponent) {
+    ko.components.register(targetComponent.selector, {
+        viewModel: targetComponent.viewModel,
+        template: targetComponent.template
+    })
+};
 
-ko.components.register(AppComponent.selector, {
-    viewModel: AppComponent.viewModel,
-    template: AppComponent.template
-})
+registerComponent(HerosComponent);
+registerComponent(AppComponent);
