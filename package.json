@@ -1,0 +1,44 @@
+{
+  "name": "knockout-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && xcopy \"src/index.html\" \"dist/\" /F /Y && xcopy \"src/style.css\" \"dist/\" /F /Y && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/\" /F /Y && xcopy \"src/style.css\" \"dist/\" /F /Y"
+  },
+  "keywords": [
+    "knockout",
+    "spa"
+  ],
+  "author": "Zhao.Yinji",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "bluebird": "^3.5.0",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "vorpal": "^1.12.0",
+    "webpack": "^3.6.0"
+  },
+  "directoryName": {
+    "dist": "dist",
+    "repo": "ko-spa",
+    "src": "src"
+  },
+  "fileName": {
+    "bundle": "bundle.js"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.1",
+    "knockout": "^3.4.2",
+    "sammy": "^0.7.6",
+    "webpack-dev-server": "^2.9.5"
+  }
+}
