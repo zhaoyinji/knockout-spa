@@ -6,18 +6,4 @@
     </li>
 </ul>
 
-<div data-bind="if: selectedHero">
-
-    <h2>
-        <span data-bind="text: selectedHero().name().toUpperCase()"></span> Details</h2>
-    <div>
-        <span>id: </span>
-        <span data-bind="text: selectedHero().id()"><span>
-    </div>
-    <div>
-        <label>name:
-            <input data-bind="value: selectedHero().name, valueUpdate: 'keyup'" placeholder="name">
-        </label>
-    </div>
-
-</div>
+<app-hero-detail params="hero: selectedHero"></app-hero-detail>
