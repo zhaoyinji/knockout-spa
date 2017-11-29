@@ -1,10 +1,16 @@
 import ko from 'knockout';
 import componentTemplate from './heros.component.html';
-import { Hero } from '../../models/hero';
+//import { Hero } from '../../models/hero';
+import { HEROES } from '../../models/mock-heroes';
 
 class HerosViewModel {
     constructor() {
-        this.hero = new Hero(1, 'Windstorm');
+        this.heroes = ko.observableArray(HEROES);
+        this.selectedHero = ko.observable(null);
+    }
+
+    onSelect = (hero) => {
+        this.selectedHero(hero);
     }
 }
 
