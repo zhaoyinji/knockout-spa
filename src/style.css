@@ -139,3 +139,43 @@ nav a.active {
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
+
+
+/* MessagesComponent's private CSS styles */
+
+.message-container h2 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+
+.message-container button {
+    color: crimson;
+    font-family: Cambria, Georgia;
+}
+
+.message-container  button.clear {
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.message-container  button:hover {
+    background-color: #cfd8dc;
+}
+
+.message-container  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+.message-container  button.clear {
+    color: #888;
+    margin-bottom: 12px;
+}

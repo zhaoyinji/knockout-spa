@@ -1,0 +1,8 @@
+<div data-bind="if: messageService.messages().length" class="message-container">
+
+    <h2>Messages</h2>
+    <button class="clear" data-bind="click: messageService.clear">clear</button>
+    <!-- ko foreach: messageService.messages -->
+    <div data-bind="text: $data"></div>
+    <!-- /ko -->
+</div>
