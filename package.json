@@ -39,6 +39,7 @@
   "dependencies": {
     "html-loader": "^0.5.1",
     "knockout": "^3.4.2",
+    "ko-component-router": "^5.0.1",
     "sammy": "^0.7.6",
     "webpack-dev-server": "^2.9.5"
   }

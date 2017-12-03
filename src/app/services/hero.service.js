@@ -1,13 +1,14 @@
 import { HEROES } from '../models/mock-heroes';
-import { MessageService } from './message.service';
 
 export class HeroService {
-    constructor(messageService) {
-        this.messageService = new MessageService();
+    constructor() {
     }
 
-    getHeroes = () => {
-        this.messageService.add('HeroService: fetched heroes');
+    getHeroes() {
         return HEROES;
+    }
+
+    getHero(id) {
+        return HEROES.find(hero => hero.id() == id);
     }
 }

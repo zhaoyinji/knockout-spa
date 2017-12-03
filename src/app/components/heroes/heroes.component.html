@@ -1,0 +1,9 @@
+<h2>My Heroes</h2>
+<ul class="heroes" data-bind="foreach: {data: heroes, as: 'hero'}">
+    <li>
+        <a data-bind="attr: {'href': 'heroes/' + hero.id()}">
+            <span class="badge" data-bind="text: hero.id()"></span>
+            <span data-bind="text: hero.name()"></span>
+        </a>
+    </li>
+</ul>

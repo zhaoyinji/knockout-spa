@@ -86,11 +86,6 @@ nav a.active {
 
 /* HeroesComponent's private CSS styles */
 
-.selected {
-    background-color: #CFD8DC !important;
-    color: white;
-}
-
 .heroes {
     margin: 0 0 2em 0;
     list-style-type: none;
@@ -99,19 +94,13 @@ nav a.active {
 }
 
 .heroes li {
-    cursor: pointer;
     position: relative;
-    left: 0;
+    cursor: pointer;
     background-color: #EEE;
     margin: .5em;
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
-}
-
-.heroes li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
 }
 
 .heroes li:hover {
@@ -120,9 +109,16 @@ nav a.active {
     left: .1em;
 }
 
-.heroes .text {
+.heroes a {
+    color: #888;
+    text-decoration: none;
     position: relative;
-    top: -3px;
+    display: block;
+    width: 250px;
+}
+
+.heroes a:hover {
+    color: #607D8B;
 }
 
 .heroes .badge {
@@ -136,26 +132,31 @@ nav a.active {
     left: -1px;
     top: -4px;
     height: 1.8em;
+    min-width: 16px;
+    text-align: right;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
 
 
-/* MessagesComponent's private CSS styles */
+/* HeroDetailComponent's private CSS styles */
 
-.message-container h2 {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+.hero-detail-container label {
+    display: inline-block;
+    width: 3em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
 }
 
-
-.message-container button {
-    color: crimson;
-    font-family: Cambria, Georgia;
+.hero-detail-container input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
 }
 
-.message-container  button.clear {
+.hero-detail-container button {
+    margin-top: 20px;
     font-family: Arial;
     background-color: #eee;
     border: none;
@@ -165,17 +166,94 @@ nav a.active {
     cursor: hand;
 }
 
-.message-container  button:hover {
+.hero-detail-container button:hover {
     background-color: #cfd8dc;
 }
 
-.message-container  button:disabled {
+.hero-detail-container button:disabled {
     background-color: #eee;
-    color: #aaa;
+    color: #ccc;
     cursor: auto;
 }
 
-.message-container  button.clear {
-    color: #888;
-    margin-bottom: 12px;
+
+/* DashboardComponent's private CSS styles */
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid *,
+.grid *:after,
+.grid *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.grid h4 {
+    position: relative;
+}
+
+.grid {
+    margin: 0;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.module {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #607D8B;
+    border-radius: 2px;
+}
+
+.module:hover {
+    background-color: #EEE;
+    cursor: pointer;
+    color: #607d8b;
+}
+
+.grid-pad {
+    padding: 10px 0;
+}
+
+.grid-pad>[class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .module {
+        font-size: 10px;
+        max-height: 75px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        margin: 0;
+    }
+    .module {
+        min-width: 60px;
+    }
 }

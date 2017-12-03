@@ -1,9 +1,0 @@
-<h2>My Heroes</h2>
-<ul class="heroes" data-bind="foreach: {data: heroes, as: 'hero'}">
-    <li data-bind="css: {'selected': $component.selectedHero() === hero}, click: $component.onSelect">
-        <span class="badge" data-bind="text: hero.id()"></span>
-        <span data-bind="text: hero.name()"></span>
-    </li>
-</ul>
-
-<app-hero-detail params="hero: selectedHero"></app-hero-detail>

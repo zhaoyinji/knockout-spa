@@ -1,10 +1,8 @@
 <h3>Top Heroes</h3>
 <div class="grid grid-pad" data-bind="foreach: { data: heroes, as: 'hero' }">
-  <a data-bind="attr: {'href': '#detail?id=' + hero.id}" class="col-1-4">
+  <a data-bind="attr: {'href': 'heroes/' + hero.id()}" class="col-1-4">
     <div class="module hero">
-      <h4 data-bind="text: hero.name"></h4>
+      <h4 data-bind="text: hero.name()"></h4>
     </div>
   </a>
 </div>
-
-<app-hero-search></app-hero-search>
